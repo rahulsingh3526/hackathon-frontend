@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import card1 from "../public/assets/card1.png";
@@ -8,12 +9,16 @@ import usdc from "../public/assets/usdc.png";
 import firstplace from "../public/assets/firstplace.png";
 import { Separator } from "./ui/separator";
 import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 
 const Card = () => {
   return (
     <div>
-      <div className="">
-        <div className="flex justify-between flex-between p-2 m-2">
+      <div>
+        <motion.div
+          className="flex justify-between flex-between p-2 m-2 transition-shadow duration-300 hover:shadow-lg"
+          whileHover={{ scale: 1.02 }}
+        >
           <div className="flex space-x-4 justify-center items-center">
             <Image src={card1} alt={""} />
             <div>
@@ -31,10 +36,13 @@ const Card = () => {
             </div>
           </div>
           <div>
-            <p>participants</p>
-            <p>date</p>
+            <p>04/04/2023</p>
+            <div className="flex space-x-2">
+              <p>36</p>
+              <p>Participants</p>
+            </div>
           </div>
-        </div>
+        </motion.div>
         <Image src={card2} alt={""} />
         <Image src={card3} alt={""} />
         <Image src={card4} alt={""} />
