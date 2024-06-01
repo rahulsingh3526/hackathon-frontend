@@ -8,6 +8,13 @@ import { Separator } from "./ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
+const data = [
+  { title: "Card 1", badges: ["design", "developer"] },
+  { title: "Card 2", badges: ["design"] },
+  { title: "Card 3", badges: ["developer"] },
+  // Add more cards here
+];
+
 interface CardProps {
   label: string;
 }
@@ -21,8 +28,8 @@ const Card = ({ label }: CardProps) => {
       >
         <div className="flex space-x-4 justify-center items-center">
           <Image src={card1} alt={""} />
-          <div>
-            <p>
+          <div className="space-y-2">
+            <p className="text-sm">
               Design {"Earn's"} Talent Leaderboard <span>by</span>
               <span>Superteam</span>
             </p>
@@ -31,7 +38,12 @@ const Card = ({ label }: CardProps) => {
               <p className="text-[#94A3B8]">USDC</p>
               <Separator orientation="vertical" className="h-6 w-[1.5px]" />
               <Image src={firstplace} alt={""} className="" />
-              <Badge variant="outline">{label}</Badge>
+
+              {data[0].badges.map((badge, index) => (
+                <Badge className="px-1 text-xs" key={index} variant="outline">
+                  {badge}
+                </Badge>
+              ))}
             </div>
           </div>
         </div>
