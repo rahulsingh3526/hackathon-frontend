@@ -64,7 +64,7 @@ export const Navbar = () => {
         <input
           type="text"
           placeholder="Search..."
-          className="w-full border border-gray-300 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow duration-300 shadow-md hover:shadow-lg"
+          className="w-full border border-gray-300 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow box-shadow-md duration-300 hover:shadow-lg"
         />
         <DropdownMenu>
           <DropdownMenuTrigger>
@@ -98,14 +98,14 @@ export const Navbar = () => {
             <DropdownMenuItem>
               <div className="flex justify-between items-center space-x-4">
                 <Image src={code} alt={""} />
-                <p>DashBoard</p>
+                <p>API</p>
               </div>{" "}
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <div className="flex justify-between items-center space-x-4">
                 <Image src={logout} alt={""} />
-                <p>DashBoard</p>
+                <p>Log Out</p>
               </div>{" "}
             </DropdownMenuItem>
           </DropdownMenuContent>
