@@ -15,7 +15,7 @@ import Card from "./card";
 const AllCard = () => {
   return (
     <div>
-      <div>
+      <div className="space-y-8">
         <Card label="Design" />
         <motion.div
           className="flex justify-between flex-between p-2 m-2 transition-shadow duration-300 hover:shadow-lg"

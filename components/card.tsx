@@ -17,7 +17,7 @@ const Card = ({ label }: CardProps) => {
     <div>
       <motion.div
         className="flex justify-between flex-between p-2 m-2 transition-shadow duration-300 hover:shadow-lg"
-        whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.05 }}
       >
         <div className="flex space-x-4 justify-center items-center">
           <Image src={card1} alt={""} />

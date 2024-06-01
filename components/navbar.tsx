@@ -5,21 +5,18 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import icon from "../public/icons/Icon.png";
+import logo from "../public/icons/Jiffyscan icon.png";
 
 export const Navbar = () => {
   return (
-    <nav className=" p-4 flex items-center justify-between">
-      <div className="flex items-center space-x-4">
-        <img src="path_to_logo" alt="Logo" className="h-10" />
-        <a href="/" className="text-black text-lg">
-          Jiffscan
-        </a>
+    <nav className=" p-4 flex items-center justify-around">
+      <div className="flex items-center space-x-12">
+        <Image src={logo} alt={""} />{" "}
         <a href="/" className="text-black text-lg">
           Home
         </a>
@@ -27,10 +24,10 @@ export const Navbar = () => {
           <button className="text-black text-lg">Blockchain</button>
           <div className="absolute hidden group-hover:block bg-white text-black mt-1 p-2 rounded shadow-lg">
             <a href="/" className="block p-2">
-              Option 1
+              Option
             </a>
             <a href="/" className="block p-2">
-              Option 2
+              Option
             </a>
           </div>
         </div>
@@ -38,10 +35,10 @@ export const Navbar = () => {
           <button className="text-black text-lg">Developers </button>
           <div className="absolute hidden group-hover:block bg-white text-black mt-1 p-2 rounded shadow-lg">
             <a href="/" className="block p-2">
-              Option 1
+              Option
             </a>
             <a href="/" className="block p-2">
-              Option 2
+              Option
             </a>
           </div>
         </div>
@@ -49,10 +46,10 @@ export const Navbar = () => {
           <button className="text-black text-lg">More</button>
           <div className="absolute hidden group-hover:block bg-white text-black mt-1 p-2 rounded shadow-lg">
             <a href="/" className="block p-2">
-              Option 1
+              Option
             </a>
             <a href="/" className="block p-2">
-              Option 2
+              Option
             </a>
           </div>
         </div>
@@ -60,7 +57,7 @@ export const Navbar = () => {
           About
         </a>
       </div>
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-8">
         <input
           type="text"
           placeholder="Search..."
@@ -69,10 +66,16 @@ export const Navbar = () => {
         <DropdownMenu>
           <DropdownMenuTrigger>
             {" "}
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
+            <div className="flex justify-center items-center space-x-2">
+              <Avatar>
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+              <div className="text-start">
+                <p>Shad CN</p>
+                <p className="text-black/50">shadcn@gmail.com</p>
+              </div>
+            </div>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-[200px]">
             <DropdownMenuItem>View Profile</DropdownMenuItem>
