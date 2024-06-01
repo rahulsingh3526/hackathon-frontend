@@ -10,12 +10,15 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import icon from "../public/icons/Icon.png";
+import code from "../public/icons/Code.png";
+import logout from "../public/icons/log-out.png";
+import dashboard from "../public/icons/Dashboard.png";
 import logo from "../public/icons/Jiffyscan icon.png";
 
 export const Navbar = () => {
   return (
-    <nav className=" p-4 flex items-center justify-around">
-      <div className="flex items-center space-x-12">
+    <nav className="flex items-center justify-around p-2">
+      <div className="flex items-center space-x-6">
         <Image src={logo} alt={""} />{" "}
         <a href="/" className="text-black text-lg">
           Home
@@ -78,18 +81,33 @@ export const Navbar = () => {
             </div>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-[200px]">
-            <DropdownMenuItem>View Profile</DropdownMenuItem>
-            <DropdownMenuSeparator />
             <DropdownMenuItem>
               <div className="flex justify-between items-center space-x-4">
                 <Image src={icon} alt={""} />
+                <p>View Profile</p>
+              </div>{" "}
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <div className="flex justify-between items-center space-x-4">
+                <Image src={dashboard} alt={""} />
                 <p>DashBoard</p>
               </div>{" "}
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>API</DropdownMenuItem>
+            <DropdownMenuItem>
+              <div className="flex justify-between items-center space-x-4">
+                <Image src={code} alt={""} />
+                <p>DashBoard</p>
+              </div>{" "}
+            </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Log Out</DropdownMenuItem>
+            <DropdownMenuItem>
+              <div className="flex justify-between items-center space-x-4">
+                <Image src={logout} alt={""} />
+                <p>DashBoard</p>
+              </div>{" "}
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
 
