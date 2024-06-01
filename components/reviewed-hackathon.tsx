@@ -1,7 +1,9 @@
 import React from "react";
 
+import AllCard from "./all-cards";
+
 const ReviewedHackathon = () => {
-  return <div>ReviewedHackathon</div>;
+  return <AllCard />;
 };
 
 export default ReviewedHackathon;

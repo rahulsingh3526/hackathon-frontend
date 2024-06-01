@@ -5,6 +5,13 @@ import ReviewedHackathon from "@/components/reviewed-hackathon";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import CompletedHackathon from "@/components/completed-hackathon";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function Home() {
   return (
@@ -22,6 +29,22 @@ export default function Home() {
               <TabsTrigger value="completed">Completed</TabsTrigger>{" "}
               <TabsTrigger value="reviewed">Reviewed</TabsTrigger>
             </TabsList>
+
+            <p>Filter</p>
+            <Select>
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="All" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="Design" textValue="1">
+                  Design
+                </SelectItem>
+                <SelectItem value="Frontend">Frontend</SelectItem>
+                <SelectItem value="Backend">Backend</SelectItem>
+                <SelectItem value="Blockchain">Blockchain</SelectItem>
+                <SelectItem value="Content">Content</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
           <TabsContent value="completed" className="w-full">

@@ -1,10 +1,11 @@
 import React from "react";
-import Card from "./card";
+import Card from "./all-cards";
+import AllCard from "./all-cards";
 
 const CompletedHackathon = () => {
   return (
     <div>
-      <Card />
+      <AllCard />
     </div>
   );
 };

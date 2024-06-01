@@ -17,14 +17,14 @@ export const Navbar = () => {
     <nav className=" p-4 flex items-center justify-between">
       <div className="flex items-center space-x-4">
         <img src="path_to_logo" alt="Logo" className="h-10" />
-        <a href="/" className="text-white text-lg">
+        <a href="/" className="text-black text-lg">
           Jiffscan
         </a>
-        <a href="/" className="text-white text-lg">
+        <a href="/" className="text-black text-lg">
           Home
         </a>
         <div className="relative group">
-          <button className="text-white text-lg">Blockchain</button>
+          <button className="text-black text-lg">Blockchain</button>
           <div className="absolute hidden group-hover:block bg-white text-black mt-1 p-2 rounded shadow-lg">
             <a href="/" className="block p-2">
               Option 1
@@ -35,7 +35,7 @@ export const Navbar = () => {
           </div>
         </div>
         <div className="relative group">
-          <button className="text-white text-lg">Developers </button>
+          <button className="text-black text-lg">Developers </button>
           <div className="absolute hidden group-hover:block bg-white text-black mt-1 p-2 rounded shadow-lg">
             <a href="/" className="block p-2">
               Option 1
@@ -46,7 +46,7 @@ export const Navbar = () => {
           </div>
         </div>
         <div className="relative group">
-          <button className="text-white text-lg">More</button>
+          <button className="text-black text-lg">More</button>
           <div className="absolute hidden group-hover:block bg-white text-black mt-1 p-2 rounded shadow-lg">
             <a href="/" className="block p-2">
               Option 1
@@ -56,7 +56,7 @@ export const Navbar = () => {
             </a>
           </div>
         </div>
-        <a href="/about" className="text-white text-lg">
+        <a href="/about" className="text-black text-lg">
           About
         </a>
       </div>
@@ -90,7 +90,7 @@ export const Navbar = () => {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <button className="text-white text-lg">🌙</button>
+        <button className="text-black text-lg">🌙</button>
       </div>
     </nav>
   );
